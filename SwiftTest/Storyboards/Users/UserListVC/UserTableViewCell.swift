@@ -12,11 +12,13 @@ class UserTableViewCell: UITableViewCell {
 
     @IBOutlet weak var picture: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
-    @IBOutlet weak var ageAndNationalityLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
+    @IBOutlet weak var nationalityLabel: UILabel!
 
     public func setup(with user: User) {
         fullNameLabel.text = user.fullName
-        ageAndNationalityLabel.text = "\(user.age) years old, from \(user.flag)"
+        ageLabel.text = user.age
+        nationalityLabel.text = user.flag
         picture.loadImage(from: user.smallPictureUrl)
     }
 }

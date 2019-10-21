@@ -10,6 +10,8 @@
 		9F197AE4235DDA950050FAE8 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F197AE2235DDA950050FAE8 /* UserTableViewCell.swift */; };
 		9F197AE5235DDA950050FAE8 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F197AE3235DDA950050FAE8 /* UserTableViewCell.xib */; };
 		9F197AE8235DDD090050FAE8 /* UIImage+AsyncLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F197AE7235DDD090050FAE8 /* UIImage+AsyncLoad.swift */; };
+		9F5E3724235DF9E4005BB422 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E3723235DF9E4005BB422 /* NetworkManager.swift */; };
+		9F5E3726235DFA9D005BB422 /* NetworkManager+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E3725235DFA9D005BB422 /* NetworkManager+API.swift */; };
 		9F8D1512235DE13600A87218 /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D1511235DE13600A87218 /* UITableViewCell+Identifier.swift */; };
 		9FD5F05D235DB52D00F0DEFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5F05C235DB52D00F0DEFF /* AppDelegate.swift */; };
 		9FD5F063235DB53000F0DEFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5F062235DB53000F0DEFF /* Assets.xcassets */; };
@@ -49,6 +51,8 @@
 		9F197AE2235DDA950050FAE8 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		9F197AE3235DDA950050FAE8 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		9F197AE7235DDD090050FAE8 /* UIImage+AsyncLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AsyncLoad.swift"; sourceTree = "<group>"; };
+		9F5E3723235DF9E4005BB422 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		9F5E3725235DFA9D005BB422 /* NetworkManager+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+API.swift"; sourceTree = "<group>"; };
 		9F8D1511235DE13600A87218 /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
 		9FD5F059235DB52D00F0DEFF /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD5F05C235DB52D00F0DEFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,15 @@
 			path = UserListVC;
 			sourceTree = "<group>";
 		};
+		9F5E3722235DF97F005BB422 /* DataManagement */ = {
+			isa = PBXGroup;
+			children = (
+				9F5E3723235DF9E4005BB422 /* NetworkManager.swift */,
+				9F5E3725235DFA9D005BB422 /* NetworkManager+API.swift */,
+			);
+			path = DataManagement;
+			sourceTree = "<group>";
+		};
 		9FD5F050235DB52D00F0DEFF = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +144,7 @@
 		9FD5F05B235DB52D00F0DEFF /* SwiftTest */ = {
 			isa = PBXGroup;
 			children = (
+				9F5E3722235DF97F005BB422 /* DataManagement */,
 				9FD5F09D235DBFA600F0DEFF /* Model */,
 				9FD5F090235DB80E00F0DEFF /* Storyboards */,
 				9FD5F0A3235DC36D00F0DEFF /* Extensions */,
@@ -355,6 +369,8 @@
 				9FD5F0A5235DC38B00F0DEFF /* String+UnicodeFlag.swift in Sources */,
 				9F197AE8235DDD090050FAE8 /* UIImage+AsyncLoad.swift in Sources */,
 				9FD5F095235DB88500F0DEFF /* UserInfoVC.swift in Sources */,
+				9F5E3724235DF9E4005BB422 /* NetworkManager.swift in Sources */,
+				9F5E3726235DFA9D005BB422 /* NetworkManager+API.swift in Sources */,
 				9FD5F098235DBA8300F0DEFF /* SplashVC.swift in Sources */,
 				9FD5F05D235DB52D00F0DEFF /* AppDelegate.swift in Sources */,
 				9F197AE4235DDA950050FAE8 /* UserTableViewCell.swift in Sources */,

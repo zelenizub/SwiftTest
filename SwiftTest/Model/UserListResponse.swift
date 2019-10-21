@@ -9,6 +9,9 @@
 import Foundation
 
 // https://randomuser.me/api?page=1&results=20
+
+typealias UserListResponseHandler = ((UserListResponse) -> Void)
+
 struct UserListResponse: Codable {
     let results: [User]
 }

@@ -28,7 +28,9 @@ class UserListVC: UIViewController {
     private var selectedUser: User?
     private var users = [User]() {
         didSet {
-            table.reloadData()
+            DispatchQueue.main.async {
+                self.table.reloadData()
+            }
         }
     }
 
@@ -56,8 +58,12 @@ class UserListVC: UIViewController {
 
     // MARK: - Utils
     private func fetchUsers(showSpinner: Bool) {
-        // TODO: implement
-        users = [dummyUser, dummyUser, dummyUser]
+        NetworkManager.shared.getUserList(page: 0, results: 100, onResponse: {[weak self] response in
+            guard let self = self else { return }
+            self.users = response.results
+        }) { error in
+            debugPrint("🔴 fetchUsers error: \(error.localizedDescription)")
+        }
     }
 }
 
