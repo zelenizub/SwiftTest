@@ -11,12 +11,14 @@ import Foundation
 struct User: Codable {
     let name: Name
     let dateOfBirth: DateOfBirth
+    let email: String
     let picture: Picture
     let nationality: String
 
     enum CodingKeys: String, CodingKey {
         case name
         case dateOfBirth = "dob"
+        case email
         case picture
         case nationality = "nat"
     }
