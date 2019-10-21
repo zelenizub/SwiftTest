@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F197AE4235DDA950050FAE8 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F197AE2235DDA950050FAE8 /* UserTableViewCell.swift */; };
+		9F197AE5235DDA950050FAE8 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F197AE3235DDA950050FAE8 /* UserTableViewCell.xib */; };
+		9F197AE8235DDD090050FAE8 /* UIImage+AsyncLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F197AE7235DDD090050FAE8 /* UIImage+AsyncLoad.swift */; };
+		9F8D1512235DE13600A87218 /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D1511235DE13600A87218 /* UITableViewCell+Identifier.swift */; };
 		9FD5F05D235DB52D00F0DEFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5F05C235DB52D00F0DEFF /* AppDelegate.swift */; };
 		9FD5F063235DB53000F0DEFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5F062235DB53000F0DEFF /* Assets.xcassets */; };
 		9FD5F066235DB53000F0DEFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5F065235DB53000F0DEFF /* Preview Assets.xcassets */; };
@@ -18,6 +22,10 @@
 		9FD5F093235DB85100F0DEFF /* UserListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5F092235DB85100F0DEFF /* UserListVC.swift */; };
 		9FD5F095235DB88500F0DEFF /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5F094235DB88500F0DEFF /* UserInfoVC.swift */; };
 		9FD5F098235DBA8300F0DEFF /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5F097235DBA8300F0DEFF /* SplashVC.swift */; };
+		9FD5F09F235DBFB300F0DEFF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5F09E235DBFB300F0DEFF /* User.swift */; };
+		9FD5F0A1235DBFFD00F0DEFF /* UserListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5F0A0235DBFFD00F0DEFF /* UserListResponse.swift */; };
+		9FD5F0A5235DC38B00F0DEFF /* String+UnicodeFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5F0A4235DC38B00F0DEFF /* String+UnicodeFlag.swift */; };
+		9FD5F0A7235DD65A00F0DEFF /* String+UnicodeFlagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5F0A6235DD65A00F0DEFF /* String+UnicodeFlagTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F197AE2235DDA950050FAE8 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		9F197AE3235DDA950050FAE8 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		9F197AE7235DDD090050FAE8 /* UIImage+AsyncLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AsyncLoad.swift"; sourceTree = "<group>"; };
+		9F8D1511235DE13600A87218 /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
 		9FD5F059235DB52D00F0DEFF /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD5F05C235DB52D00F0DEFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FD5F062235DB53000F0DEFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +67,10 @@
 		9FD5F092235DB85100F0DEFF /* UserListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListVC.swift; sourceTree = "<group>"; };
 		9FD5F094235DB88500F0DEFF /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		9FD5F097235DBA8300F0DEFF /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		9FD5F09E235DBFB300F0DEFF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9FD5F0A0235DBFFD00F0DEFF /* UserListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListResponse.swift; sourceTree = "<group>"; };
+		9FD5F0A4235DC38B00F0DEFF /* String+UnicodeFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UnicodeFlag.swift"; sourceTree = "<group>"; };
+		9FD5F0A6235DD65A00F0DEFF /* String+UnicodeFlagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UnicodeFlagTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +98,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F197AE6235DDA990050FAE8 /* UserListVC */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5F092235DB85100F0DEFF /* UserListVC.swift */,
+				9F197AE2235DDA950050FAE8 /* UserTableViewCell.swift */,
+				9F197AE3235DDA950050FAE8 /* UserTableViewCell.xib */,
+			);
+			path = UserListVC;
+			sourceTree = "<group>";
+		};
 		9FD5F050235DB52D00F0DEFF = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +131,9 @@
 		9FD5F05B235DB52D00F0DEFF /* SwiftTest */ = {
 			isa = PBXGroup;
 			children = (
+				9FD5F09D235DBFA600F0DEFF /* Model */,
 				9FD5F090235DB80E00F0DEFF /* Storyboards */,
+				9FD5F0A3235DC36D00F0DEFF /* Extensions */,
 				9FD5F05C235DB52D00F0DEFF /* AppDelegate.swift */,
 				9FD5F062235DB53000F0DEFF /* Assets.xcassets */,
 				9FD5F06A235DB53000F0DEFF /* Info.plist */,
@@ -127,6 +155,7 @@
 			children = (
 				9FD5F073235DB53000F0DEFF /* SwiftTestTests.swift */,
 				9FD5F075235DB53000F0DEFF /* Info.plist */,
+				9FD5F0A6235DD65A00F0DEFF /* String+UnicodeFlagTests.swift */,
 			);
 			path = SwiftTestTests;
 			sourceTree = "<group>";
@@ -154,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				9FD5F08E235DB72100F0DEFF /* Users.storyboard */,
-				9FD5F092235DB85100F0DEFF /* UserListVC.swift */,
+				9F197AE6235DDA990050FAE8 /* UserListVC */,
 				9FD5F094235DB88500F0DEFF /* UserInfoVC.swift */,
 			);
 			path = Users;
@@ -167,6 +196,25 @@
 				9FD5F097235DBA8300F0DEFF /* SplashVC.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		9FD5F09D235DBFA600F0DEFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5F09E235DBFB300F0DEFF /* User.swift */,
+				9FD5F0A0235DBFFD00F0DEFF /* UserListResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9FD5F0A3235DC36D00F0DEFF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5F0A4235DC38B00F0DEFF /* String+UnicodeFlag.swift */,
+				9F197AE7235DDD090050FAE8 /* UIImage+AsyncLoad.swift */,
+				9F8D1511235DE13600A87218 /* UITableViewCell+Identifier.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +325,7 @@
 				9FD5F08F235DB72100F0DEFF /* Users.storyboard in Resources */,
 				9FD5F066235DB53000F0DEFF /* Preview Assets.xcassets in Resources */,
 				9FD5F063235DB53000F0DEFF /* Assets.xcassets in Resources */,
+				9F197AE5235DDA950050FAE8 /* UserTableViewCell.xib in Resources */,
 				9FD5F08D235DB61F00F0DEFF /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,9 +351,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F8D1512235DE13600A87218 /* UITableViewCell+Identifier.swift in Sources */,
+				9FD5F0A5235DC38B00F0DEFF /* String+UnicodeFlag.swift in Sources */,
+				9F197AE8235DDD090050FAE8 /* UIImage+AsyncLoad.swift in Sources */,
 				9FD5F095235DB88500F0DEFF /* UserInfoVC.swift in Sources */,
 				9FD5F098235DBA8300F0DEFF /* SplashVC.swift in Sources */,
 				9FD5F05D235DB52D00F0DEFF /* AppDelegate.swift in Sources */,
+				9F197AE4235DDA950050FAE8 /* UserTableViewCell.swift in Sources */,
+				9FD5F0A1235DBFFD00F0DEFF /* UserListResponse.swift in Sources */,
+				9FD5F09F235DBFB300F0DEFF /* User.swift in Sources */,
 				9FD5F093235DB85100F0DEFF /* UserListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FD5F0A7235DD65A00F0DEFF /* String+UnicodeFlagTests.swift in Sources */,
 				9FD5F074235DB53000F0DEFF /* SwiftTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,6 +18,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Pi-Kf-e4M">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="aMW-UH-oMj" id="oN1-WP-9oX"/>
+                                    <outlet property="delegate" destination="aMW-UH-oMj" id="evu-gq-pai"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -33,6 +37,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="6hG-o0-SbN"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="table" destination="6Pi-Kf-e4M" id="dqB-6n-aHI"/>
                         <segue destination="gxW-FJ-J1e" kind="show" identifier="goToDetails" id="tXy-uO-L3b"/>
                     </connections>
                 </viewController>
