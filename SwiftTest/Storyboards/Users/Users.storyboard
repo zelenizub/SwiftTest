@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oFf-AS-35h">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User list-->
+        <scene sceneID="rFv-ox-vmM">
+            <objects>
+                <viewController storyboardIdentifier="UserListVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aMW-UH-oMj" customClass="UserListVC" customModule="SwiftTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ySk-mc-AFT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Pi-Kf-e4M">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="P6y-XS-UFW" firstAttribute="bottom" secondItem="6Pi-Kf-e4M" secondAttribute="bottom" id="6fm-gi-KAi"/>
+                            <constraint firstItem="6Pi-Kf-e4M" firstAttribute="leading" secondItem="P6y-XS-UFW" secondAttribute="leading" id="8w6-Kl-evv"/>
+                            <constraint firstItem="P6y-XS-UFW" firstAttribute="trailing" secondItem="6Pi-Kf-e4M" secondAttribute="trailing" id="j9O-JM-ZUf"/>
+                            <constraint firstItem="6Pi-Kf-e4M" firstAttribute="top" secondItem="P6y-XS-UFW" secondAttribute="top" id="wk2-OP-CPS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="P6y-XS-UFW"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="User list" id="S8V-Pz-zxW">
+                        <barButtonItem key="backBarButtonItem" title=" " id="6hG-o0-SbN"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="gxW-FJ-J1e" kind="show" identifier="goToDetails" id="tXy-uO-L3b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1gz-d2-vuC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893" y="138"/>
+        </scene>
+        <!--User InfoVC-->
+        <scene sceneID="XqW-DK-Pyh">
+            <objects>
+                <viewController storyboardIdentifier="UserInfoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gxW-FJ-J1e" customClass="UserInfoVC" customModule="SwiftTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e8o-ah-HO2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="giV-EB-EwC"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z0k-qq-l60"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C6X-L6-Kni" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1680" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aEl-qe-7hz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="oFf-AS-35h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WVb-8Q-YMG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aMW-UH-oMj" kind="relationship" relationship="rootViewController" id="jrO-p2-e6s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vYa-Fi-PmQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>

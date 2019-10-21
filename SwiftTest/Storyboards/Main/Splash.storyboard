@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TAR-uz-4bM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SplashVC-->
+        <scene sceneID="V4Z-gK-khF">
+            <objects>
+                <viewController storyboardIdentifier="SplashVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TAR-uz-4bM" customClass="SplashVC" customModule="SwiftTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ka4-ey-3Xz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lo-pi-EPX">
+                                <rect key="frame" x="156" y="244" width="102.5" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3lo-pi-EPX" firstAttribute="centerX" secondItem="xUA-0D-A2W" secondAttribute="centerX" id="5BE-Dr-ZAW"/>
+                            <constraint firstItem="3lo-pi-EPX" firstAttribute="top" secondItem="xUA-0D-A2W" secondAttribute="top" constant="200" id="BVg-hm-dxS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xUA-0D-A2W"/>
+                    </view>
+                    <connections>
+                        <segue destination="Ghj-tl-Qzw" kind="show" identifier="goToUsers" id="rc2-7A-mGV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FHH-M4-zpK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71" y="138"/>
+        </scene>
+        <!--Users-->
+        <scene sceneID="luK-0E-GtA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Users" id="Ghj-tl-Qzw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="hkU-fH-7Hf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJQ-JT-pZU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="530" y="138"/>
+        </scene>
+    </scenes>
+</document>
