@@ -8,8 +8,7 @@
 
 import Foundation
 
-typealias ErrorHandler = ((Error) -> Void)
-typealias DataHandler = ((Data) -> Void)
+typealias DataHandler = ((Result<Data, Error>) -> Void)
 
 enum NetworkError: Error {
     case unexpectedResponseFormat
@@ -23,10 +22,8 @@ class NetworkManager {
     // MARK: - Constants
     let timeout = 60.0 //1min
 
-    // TODO: use result
-
     // MARK: - API
-    public func get(url: URL, onData: DataHandler?, onError: ErrorHandler?) {
+    public func get(url: URL, onCompletion: DataHandler?) {
         var request = URLRequest(
             url: url,
             cachePolicy: .reloadIgnoringLocalCacheData,
@@ -34,8 +31,8 @@ class NetworkManager {
         )
         request.httpMethod = "GET"
         URLSession.shared.dataTask(with: request) { (data, _, error) in
-            if let error = error { onError?(error) }
-            else if let data = data { onData?(data) }
+            if let error = error { onCompletion?(.failure(error)) }
+            else if let data = data { onCompletion?(.success(data)) }
             }.resume()
     }
 }

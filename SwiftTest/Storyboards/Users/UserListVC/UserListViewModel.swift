@@ -19,16 +19,16 @@ class UserListViewModel {
 
     // MARK: - Properties
     private weak var delegate: UserListViewModelDelegate?
-    private var networkManager: NetworkManager!
+    private var userAPIClient: UserAPIClient!
     private var isFetching = false
     private var currentPage = 0
     private(set) var totalCount = 0
     private(set) var users = [User]()
 
     // MARK: - Init
-    init(delegate: UserListViewModelDelegate, networkManager: NetworkManager) {
+    init(delegate: UserListViewModelDelegate, userAPIClient: UserAPIClient) {
         self.delegate = delegate
-        self.networkManager = networkManager
+        self.userAPIClient = userAPIClient
     }
 
     // MARK: - Utils
@@ -39,21 +39,22 @@ class UserListViewModel {
     func fetchUsers() {
         guard !isFetching else { return }
         isFetching = true
-        networkManager.getUserList(page: currentPage, results: pageSize, onResponse: {[weak self] response in
+        userAPIClient.getUserList(page: currentPage, results: pageSize) {[weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.async {
-                self.currentPage += 1
-                // Since the https://randomuser.me/api doesn't return the total value,
-                // we're always setting it to one page after the last loaded
-                self.totalCount = (self.currentPage + 1) * self.pageSize
-                self.isFetching = false
-                self.users.append(contentsOf: response.results)
-                self.delegate?.onFetchCompleted()
-            }
-        }) {[weak self] error in
-            DispatchQueue.main.async {
-                self?.isFetching = false
-                self?.delegate?.onFetchFailed(with: error.localizedDescription)
+                switch result {
+                case let .success(response):
+                    self.currentPage += 1
+                    // Since the https://randomuser.me/api doesn't return the total value,
+                    // we're always setting it to one page after the last loaded
+                    self.totalCount = (self.currentPage + 1) * self.pageSize
+                    self.isFetching = false
+                    self.users.append(contentsOf: response.results)
+                    self.delegate?.onFetchCompleted()
+                case let .failure(error):
+                    self.isFetching = false
+                    self.delegate?.onFetchFailed(with: error.localizedDescription)
+                }
             }
         }
     }

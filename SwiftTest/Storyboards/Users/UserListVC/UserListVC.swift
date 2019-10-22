@@ -24,6 +24,7 @@ class UserListVC: UIViewController {
 
     // MARK: - Constants
     let loadingCellID = "LoadingCell"
+    let infoSegueID = "goToInfo"
 
     // MARK: - IBOutlets
     @IBOutlet weak var table: UITableView!
@@ -31,7 +32,7 @@ class UserListVC: UIViewController {
 
     // MARK: - Properties
     private lazy var viewModel = {
-        UserListViewModel(delegate: self, networkManager: NetworkManager.shared)
+        UserListViewModel(delegate: self, userAPIClient: NetworkManager.shared)
     }()
     private var selectedUser: User?
 
@@ -99,8 +100,7 @@ extension UserListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         selectedUser = viewModel.users[indexPath.row]
-        // TODO: extract segue
-        performSegue(withIdentifier: "goToInfo", sender: self)
+        performSegue(withIdentifier: infoSegueID, sender: self)
     }
 }
 
