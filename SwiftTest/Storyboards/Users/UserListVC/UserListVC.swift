@@ -37,10 +37,6 @@ class UserListVC: UIViewController {
             forCellReuseIdentifier: UserTableViewCell.reuseIdentifier
         )
         table.register(
-            UINib(nibName: UserTableViewCell.reuseIdentifier, bundle: nil),
-            forCellReuseIdentifier: UserTableViewCell.reuseIdentifier
-        )
-        table.register(
             UINib(nibName: loadingCellID, bundle: nil),
             forCellReuseIdentifier: loadingCellID
         )

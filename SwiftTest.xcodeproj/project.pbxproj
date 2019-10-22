@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F089BD3235FA372009C0DA9 /* AsyncImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F089BD2235FA372009C0DA9 /* AsyncImageDownloader.swift */; };
 		9F197AE4235DDA950050FAE8 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F197AE2235DDA950050FAE8 /* UserTableViewCell.swift */; };
 		9F197AE5235DDA950050FAE8 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F197AE3235DDA950050FAE8 /* UserTableViewCell.xib */; };
 		9F197AE8235DDD090050FAE8 /* UIImage+AsyncLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F197AE7235DDD090050FAE8 /* UIImage+AsyncLoad.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F089BD2235FA372009C0DA9 /* AsyncImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageDownloader.swift; sourceTree = "<group>"; };
 		9F197AE2235DDA950050FAE8 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		9F197AE3235DDA950050FAE8 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		9F197AE7235DDD090050FAE8 /* UIImage+AsyncLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AsyncLoad.swift"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				9F5E3723235DF9E4005BB422 /* NetworkManager.swift */,
 				9F5E3725235DFA9D005BB422 /* NetworkManager+UserAPIClient.swift */,
+				9F089BD2235FA372009C0DA9 /* AsyncImageDownloader.swift */,
 			);
 			path = DataManagement;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				9F5E3724235DF9E4005BB422 /* NetworkManager.swift in Sources */,
 				9F5E3726235DFA9D005BB422 /* NetworkManager+UserAPIClient.swift in Sources */,
 				9FD5F098235DBA8300F0DEFF /* SplashVC.swift in Sources */,
+				9F089BD3235FA372009C0DA9 /* AsyncImageDownloader.swift in Sources */,
 				9FD5F05D235DB52D00F0DEFF /* AppDelegate.swift in Sources */,
 				9F5E372B235E2CF4005BB422 /* UserListViewModel.swift in Sources */,
 				9F197AE4235DDA950050FAE8 /* UserTableViewCell.swift in Sources */,
@@ -591,6 +595,7 @@
 				DEVELOPMENT_TEAM = AV96325JVB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -611,6 +616,7 @@
 				DEVELOPMENT_TEAM = AV96325JVB;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

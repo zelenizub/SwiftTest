@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 
+// MARK: - Image cache
 let imageCache = NSCache<NSString, UIImage>()
 
+// MARK: - UIImageView extension
 extension UIImageView {
     func loadImage(from urlString : String, placeholder: UIImage? = nil, usingCache: Bool = true) {
         self.image = placeholder
@@ -22,21 +24,14 @@ extension UIImageView {
     }
 
     private func downloadImage(from urlString: String) {
-        guard let url = URL(string: urlString) else {
-            print("🔴 Invalid image url: \(urlString)!")
-            return
+        AsyncImageDownloader.shared.downloadImage(from: urlString) { result in
+            switch result {
+            case let .success(image):
+                imageCache.setObject(image, forKey: urlString as NSString)
+                self.image = image
+            case let .failure(error):
+                print("🔴 Error downloading image: \(error.localizedDescription)!")
+            }
         }
-        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
-            DispatchQueue.main.async {
-                if let image = UIImage(data: data!) {
-                    imageCache.setObject(image, forKey: urlString as NSString)
-                    self.image = image
-                }
-            }
-        }).resume()
     }
 }

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oFf-AS-35h">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Pi-Kf-e4M">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="aMW-UH-oMj" id="oN1-WP-9oX"/>
@@ -30,7 +31,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="P6y-XS-UFW" firstAttribute="bottom" secondItem="6Pi-Kf-e4M" secondAttribute="bottom" id="6fm-gi-KAi"/>
+                            <constraint firstAttribute="bottom" secondItem="6Pi-Kf-e4M" secondAttribute="bottom" id="6fm-gi-KAi"/>
                             <constraint firstItem="6Pi-Kf-e4M" firstAttribute="leading" secondItem="P6y-XS-UFW" secondAttribute="leading" id="8w6-Kl-evv"/>
                             <constraint firstItem="GcH-IE-yMT" firstAttribute="centerX" secondItem="P6y-XS-UFW" secondAttribute="centerX" id="OYb-jq-5iZ"/>
                             <constraint firstItem="P6y-XS-UFW" firstAttribute="trailing" secondItem="6Pi-Kf-e4M" secondAttribute="trailing" id="j9O-JM-ZUf"/>
