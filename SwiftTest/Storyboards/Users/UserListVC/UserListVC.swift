@@ -8,18 +8,6 @@
 
 import UIKit
 
-// TODO: remove
-let dummyUser = User(
-    name: Name(title: "Mr.", first: "Emile", last: "Scot"),
-    dateOfBirth: DateOfBirth(age: 69),
-    email: "emile.scott@example.com",
-    picture: Picture(
-        large: "https://randomuser.me/api/portraits/men/68.jpg",
-        thumbnail: "https://randomuser.me/api/portraits/thumb/men/68.jpg"
-    ),
-    nationality: "CA"
-)
-
 class UserListVC: UIViewController {
 
     // MARK: - Constants
@@ -121,9 +109,9 @@ extension UserListVC: UserListViewModelDelegate {
         table.reloadData()
     }
 
-    func onFetchFailed(with error: String) {
+    func onFetchFailed(with error: Error) {
         spinner.isHidden = true
-        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true, completion: nil)
     }

@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct User: Codable {
+// Equatable is needed for unit tests
+struct User: Codable, Equatable {
     let name: Name
     let dateOfBirth: DateOfBirth
     let email: String
@@ -25,17 +26,17 @@ struct User: Codable {
 }
 
 // MARK: - Substructs
-struct Name: Codable {
+struct Name: Codable, Equatable {
     let title: String
     let first: String
     let last: String
 }
 
-struct DateOfBirth: Codable {
+struct DateOfBirth: Codable, Equatable {
     let age: Int
 }
 
-struct Picture: Codable {
+struct Picture: Codable, Equatable {
     let large: String
     let thumbnail: String
 }

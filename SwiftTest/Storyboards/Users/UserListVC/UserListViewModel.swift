@@ -10,7 +10,7 @@ import Foundation
 
 protocol UserListViewModelDelegate: class {
     func onFetchCompleted()
-    func onFetchFailed(with error: String)
+    func onFetchFailed(with error: Error)
 }
 
 class UserListViewModel {
@@ -21,7 +21,7 @@ class UserListViewModel {
     private weak var delegate: UserListViewModelDelegate?
     private var userAPIClient: UserAPIClient!
     private var isFetching = false
-    private var currentPage = 0
+    private(set) var currentPage = 0
     private(set) var totalCount = 0
     private(set) var users = [User]()
 
@@ -53,7 +53,7 @@ class UserListViewModel {
                     self.delegate?.onFetchCompleted()
                 case let .failure(error):
                     self.isFetching = false
-                    self.delegate?.onFetchFailed(with: error.localizedDescription)
+                    self.delegate?.onFetchFailed(with: error)
                 }
             }
         }

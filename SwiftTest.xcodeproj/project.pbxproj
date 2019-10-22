@@ -15,12 +15,14 @@
 		9F5E372B235E2CF4005BB422 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E372A235E2CF4005BB422 /* UserListViewModel.swift */; };
 		9F5E372F235EFA66005BB422 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F5E372D235EFA66005BB422 /* LoadingCell.xib */; };
 		9F5E3731235F1161005BB422 /* UserListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E3730235F1161005BB422 /* UserListViewModelTests.swift */; };
+		9F5E3733235F25F6005BB422 /* UserAPIClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E3732235F25F6005BB422 /* UserAPIClientStub.swift */; };
+		9F5E3735235F269F005BB422 /* UserFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E3734235F269F005BB422 /* UserFixture.swift */; };
+		9F5E373A235F2910005BB422 /* UserListViewModelDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E3739235F2910005BB422 /* UserListViewModelDelegateSpy.swift */; };
 		9F8D1512235DE13600A87218 /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D1511235DE13600A87218 /* UITableViewCell+Identifier.swift */; };
 		9FD5F05D235DB52D00F0DEFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5F05C235DB52D00F0DEFF /* AppDelegate.swift */; };
 		9FD5F063235DB53000F0DEFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5F062235DB53000F0DEFF /* Assets.xcassets */; };
 		9FD5F066235DB53000F0DEFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5F065235DB53000F0DEFF /* Preview Assets.xcassets */; };
 		9FD5F069235DB53000F0DEFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5F067235DB53000F0DEFF /* LaunchScreen.storyboard */; };
-		9FD5F074235DB53000F0DEFF /* SwiftTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5F073235DB53000F0DEFF /* SwiftTestTests.swift */; };
 		9FD5F07F235DB53000F0DEFF /* SwiftTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5F07E235DB53000F0DEFF /* SwiftTestUITests.swift */; };
 		9FD5F08D235DB61F00F0DEFF /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5F08C235DB61F00F0DEFF /* Splash.storyboard */; };
 		9FD5F08F235DB72100F0DEFF /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5F08E235DB72100F0DEFF /* Users.storyboard */; };
@@ -59,6 +61,9 @@
 		9F5E372A235E2CF4005BB422 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		9F5E372D235EFA66005BB422 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		9F5E3730235F1161005BB422 /* UserListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelTests.swift; sourceTree = "<group>"; };
+		9F5E3732235F25F6005BB422 /* UserAPIClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPIClientStub.swift; sourceTree = "<group>"; };
+		9F5E3734235F269F005BB422 /* UserFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFixture.swift; sourceTree = "<group>"; };
+		9F5E3739235F2910005BB422 /* UserListViewModelDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelDelegateSpy.swift; sourceTree = "<group>"; };
 		9F8D1511235DE13600A87218 /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
 		9FD5F059235DB52D00F0DEFF /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD5F05C235DB52D00F0DEFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +72,6 @@
 		9FD5F068235DB53000F0DEFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FD5F06A235DB53000F0DEFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FD5F06F235DB53000F0DEFF /* SwiftTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FD5F073235DB53000F0DEFF /* SwiftTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestTests.swift; sourceTree = "<group>"; };
 		9FD5F075235DB53000F0DEFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FD5F07A235DB53000F0DEFF /* SwiftTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD5F07E235DB53000F0DEFF /* SwiftTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTestUITests.swift; sourceTree = "<group>"; };
@@ -129,6 +133,32 @@
 			path = DataManagement;
 			sourceTree = "<group>";
 		};
+		9F5E3736235F2788005BB422 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				9F5E3732235F25F6005BB422 /* UserAPIClientStub.swift */,
+				9F5E3739235F2910005BB422 /* UserListViewModelDelegateSpy.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		9F5E3737235F2794005BB422 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				9F5E3734235F269F005BB422 /* UserFixture.swift */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		9F5E3738235F27A1005BB422 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5F0A6235DD65A00F0DEFF /* String+UnicodeFlagTests.swift */,
+				9F5E3730235F1161005BB422 /* UserListViewModelTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		9FD5F050235DB52D00F0DEFF = {
 			isa = PBXGroup;
 			children = (
@@ -175,10 +205,10 @@
 		9FD5F072235DB53000F0DEFF /* SwiftTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				9FD5F073235DB53000F0DEFF /* SwiftTestTests.swift */,
 				9FD5F075235DB53000F0DEFF /* Info.plist */,
-				9FD5F0A6235DD65A00F0DEFF /* String+UnicodeFlagTests.swift */,
-				9F5E3730235F1161005BB422 /* UserListViewModelTests.swift */,
+				9F5E3738235F27A1005BB422 /* Tests */,
+				9F5E3736235F2788005BB422 /* Mocks */,
+				9F5E3737235F2794005BB422 /* Fixtures */,
 			);
 			path = SwiftTestTests;
 			sourceTree = "<group>";
@@ -395,9 +425,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5E3733235F25F6005BB422 /* UserAPIClientStub.swift in Sources */,
 				9F5E3731235F1161005BB422 /* UserListViewModelTests.swift in Sources */,
+				9F5E3735235F269F005BB422 /* UserFixture.swift in Sources */,
 				9FD5F0A7235DD65A00F0DEFF /* String+UnicodeFlagTests.swift in Sources */,
-				9FD5F074235DB53000F0DEFF /* SwiftTestTests.swift in Sources */,
+				9F5E373A235F2910005BB422 /* UserListViewModelDelegateSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
