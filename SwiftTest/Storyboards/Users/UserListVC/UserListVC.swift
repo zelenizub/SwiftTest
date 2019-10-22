@@ -8,6 +8,7 @@
 
 import UIKit
 
+// TODO: remove
 let dummyUser = User(
     name: Name(title: "Mr.", first: "Emile", last: "Scot"),
     dateOfBirth: DateOfBirth(age: 69),
@@ -54,10 +55,13 @@ class UserListVC: UIViewController {
             UINib(nibName: loadingCellID, bundle: nil),
             forCellReuseIdentifier: loadingCellID
         )
-        spinner.isHidden = false
-        table.isHidden = true
+        if viewModel.currentCount == 0 {
+            spinner.isHidden = false
+            table.isHidden = true
+        }
     }
 
+    // MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         if let destination = segue.destination as? UserInfoVC {
