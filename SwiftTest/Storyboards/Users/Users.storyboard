@@ -21,14 +21,20 @@
                                 <connections>
                                     <outlet property="dataSource" destination="aMW-UH-oMj" id="oN1-WP-9oX"/>
                                     <outlet property="delegate" destination="aMW-UH-oMj" id="evu-gq-pai"/>
+                                    <outlet property="prefetchDataSource" destination="aMW-UH-oMj" id="W4H-UJ-XzI"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="GcH-IE-yMT">
+                                <rect key="frame" x="188.5" y="456.5" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="P6y-XS-UFW" firstAttribute="bottom" secondItem="6Pi-Kf-e4M" secondAttribute="bottom" id="6fm-gi-KAi"/>
                             <constraint firstItem="6Pi-Kf-e4M" firstAttribute="leading" secondItem="P6y-XS-UFW" secondAttribute="leading" id="8w6-Kl-evv"/>
+                            <constraint firstItem="GcH-IE-yMT" firstAttribute="centerX" secondItem="P6y-XS-UFW" secondAttribute="centerX" id="OYb-jq-5iZ"/>
                             <constraint firstItem="P6y-XS-UFW" firstAttribute="trailing" secondItem="6Pi-Kf-e4M" secondAttribute="trailing" id="j9O-JM-ZUf"/>
+                            <constraint firstItem="GcH-IE-yMT" firstAttribute="centerY" secondItem="P6y-XS-UFW" secondAttribute="centerY" id="uQI-0V-vZE"/>
                             <constraint firstItem="6Pi-Kf-e4M" firstAttribute="top" secondItem="P6y-XS-UFW" secondAttribute="top" id="wk2-OP-CPS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="P6y-XS-UFW"/>
@@ -37,6 +43,7 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="6hG-o0-SbN"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="spinner" destination="GcH-IE-yMT" id="fpQ-gO-K92"/>
                         <outlet property="table" destination="6Pi-Kf-e4M" id="dqB-6n-aHI"/>
                         <segue destination="gxW-FJ-J1e" kind="show" identifier="goToInfo" id="tXy-uO-L3b"/>
                     </connections>

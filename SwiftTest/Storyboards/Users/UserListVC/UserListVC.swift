@@ -21,27 +21,41 @@ let dummyUser = User(
 
 class UserListVC: UIViewController {
 
+    // MARK: - Constants
+    let loadingCellID = "LoadingCell"
+
     // MARK: - IBOutlets
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
 
     // MARK: - Properties
+    private lazy var viewModel = {
+        UserListViewModel(delegate: self, networkManager: NetworkManager.shared)
+    }()
     private var selectedUser: User?
-    private var users = [User]() {
-        didSet {
-            DispatchQueue.main.async {
-                self.table.reloadData()
-            }
-        }
-    }
 
     // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.fetchUsers()
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         table.register(
             UINib(nibName: UserTableViewCell.reuseIdentifier, bundle: nil),
             forCellReuseIdentifier: UserTableViewCell.reuseIdentifier
         )
-        fetchUsers(showSpinner: true)
+        table.register(
+            UINib(nibName: UserTableViewCell.reuseIdentifier, bundle: nil),
+            forCellReuseIdentifier: UserTableViewCell.reuseIdentifier
+        )
+        table.register(
+            UINib(nibName: loadingCellID, bundle: nil),
+            forCellReuseIdentifier: loadingCellID
+        )
+        spinner.isHidden = false
+        table.isHidden = true
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,30 +69,23 @@ class UserListVC: UIViewController {
             self.selectedUser = nil
         }
     }
-
-    // MARK: - Utils
-    private func fetchUsers(showSpinner: Bool) {
-        NetworkManager.shared.getUserList(page: 0, results: 100, onResponse: {[weak self] response in
-            guard let self = self else { return }
-            self.users = response.results
-        }) { error in
-            debugPrint("🔴 fetchUsers error: \(error.localizedDescription)")
-        }
-    }
 }
 
 // MARK: - UITableViewDataSource
 extension UserListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
+        return viewModel.totalCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if isLoadingCell(for: indexPath) {
+            return table.dequeueReusableCell(withIdentifier: loadingCellID, for: indexPath)
+        }
         guard let cell = table.dequeueReusableCell(withIdentifier: UserTableViewCell.reuseIdentifier, for: indexPath) as? UserTableViewCell else {
             debugPrint("🔴 Could not dequeue user cell!")
             return UITableViewCell()
         }
-        cell.setup(with: users[indexPath.row])
+        cell.setup(with: viewModel.users[indexPath.row])
         return cell
     }
 }
@@ -87,8 +94,40 @@ extension UserListVC: UITableViewDataSource {
 extension UserListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        selectedUser = users[indexPath.row]
+        selectedUser = viewModel.users[indexPath.row]
         // TODO: extract segue
         performSegue(withIdentifier: "goToInfo", sender: self)
+    }
+}
+
+// MARK: - UITableViewDataSourcePrefetching
+extension UserListVC: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        if indexPaths.contains(where: isLoadingCell) {
+          viewModel.fetchUsers()
+        }
+    }
+}
+
+// MARK: - UserListViewModelDelegate
+extension UserListVC: UserListViewModelDelegate {
+    func onFetchCompleted() {
+        spinner.isHidden = true
+        table.isHidden = false
+        table.reloadData()
+    }
+
+    func onFetchFailed(with error: String) {
+        spinner.isHidden = true
+        let alert = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true, completion: nil)
+    }
+}
+
+// MARK: - IndexPath Utils
+private extension UserListVC {
+    func isLoadingCell(for indexPath: IndexPath) -> Bool {
+        return indexPath.row >= viewModel.currentCount
     }
 }

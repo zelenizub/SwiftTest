@@ -12,6 +12,8 @@
 		9F197AE8235DDD090050FAE8 /* UIImage+AsyncLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F197AE7235DDD090050FAE8 /* UIImage+AsyncLoad.swift */; };
 		9F5E3724235DF9E4005BB422 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E3723235DF9E4005BB422 /* NetworkManager.swift */; };
 		9F5E3726235DFA9D005BB422 /* NetworkManager+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E3725235DFA9D005BB422 /* NetworkManager+API.swift */; };
+		9F5E372B235E2CF4005BB422 /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E372A235E2CF4005BB422 /* UserListViewModel.swift */; };
+		9F5E372F235EFA66005BB422 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F5E372D235EFA66005BB422 /* LoadingCell.xib */; };
 		9F8D1512235DE13600A87218 /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D1511235DE13600A87218 /* UITableViewCell+Identifier.swift */; };
 		9FD5F05D235DB52D00F0DEFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5F05C235DB52D00F0DEFF /* AppDelegate.swift */; };
 		9FD5F063235DB53000F0DEFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5F062235DB53000F0DEFF /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 		9F197AE7235DDD090050FAE8 /* UIImage+AsyncLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AsyncLoad.swift"; sourceTree = "<group>"; };
 		9F5E3723235DF9E4005BB422 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		9F5E3725235DFA9D005BB422 /* NetworkManager+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+API.swift"; sourceTree = "<group>"; };
+		9F5E372A235E2CF4005BB422 /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
+		9F5E372D235EFA66005BB422 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		9F8D1511235DE13600A87218 /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
 		9FD5F059235DB52D00F0DEFF /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD5F05C235DB52D00F0DEFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,9 +109,11 @@
 		9F197AE6235DDA990050FAE8 /* UserListVC */ = {
 			isa = PBXGroup;
 			children = (
+				9F5E372A235E2CF4005BB422 /* UserListViewModel.swift */,
 				9FD5F092235DB85100F0DEFF /* UserListVC.swift */,
 				9F197AE2235DDA950050FAE8 /* UserTableViewCell.swift */,
 				9F197AE3235DDA950050FAE8 /* UserTableViewCell.xib */,
+				9F5E372D235EFA66005BB422 /* LoadingCell.xib */,
 			);
 			path = UserListVC;
 			sourceTree = "<group>";
@@ -119,6 +125,13 @@
 				9F5E3725235DFA9D005BB422 /* NetworkManager+API.swift */,
 			);
 			path = DataManagement;
+			sourceTree = "<group>";
+		};
+		9F5E3727235E0365005BB422 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		9FD5F050235DB52D00F0DEFF = {
@@ -144,6 +157,7 @@
 		9FD5F05B235DB52D00F0DEFF /* SwiftTest */ = {
 			isa = PBXGroup;
 			children = (
+				9F5E3727235E0365005BB422 /* Utilities */,
 				9F5E3722235DF97F005BB422 /* DataManagement */,
 				9FD5F09D235DBFA600F0DEFF /* Model */,
 				9FD5F090235DB80E00F0DEFF /* Storyboards */,
@@ -335,6 +349,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5E372F235EFA66005BB422 /* LoadingCell.xib in Resources */,
 				9FD5F069235DB53000F0DEFF /* LaunchScreen.storyboard in Resources */,
 				9FD5F08F235DB72100F0DEFF /* Users.storyboard in Resources */,
 				9FD5F066235DB53000F0DEFF /* Preview Assets.xcassets in Resources */,
@@ -373,6 +388,7 @@
 				9F5E3726235DFA9D005BB422 /* NetworkManager+API.swift in Sources */,
 				9FD5F098235DBA8300F0DEFF /* SplashVC.swift in Sources */,
 				9FD5F05D235DB52D00F0DEFF /* AppDelegate.swift in Sources */,
+				9F5E372B235E2CF4005BB422 /* UserListViewModel.swift in Sources */,
 				9F197AE4235DDA950050FAE8 /* UserTableViewCell.swift in Sources */,
 				9FD5F0A1235DBFFD00F0DEFF /* UserListResponse.swift in Sources */,
 				9FD5F09F235DBFB300F0DEFF /* User.swift in Sources */,

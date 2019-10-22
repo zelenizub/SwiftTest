@@ -23,6 +23,8 @@ class NetworkManager {
     // MARK: - Constants
     let timeout = 60.0 //1min
 
+    // TODO: use result
+
     // MARK: - API
     public func get(url: URL, onData: DataHandler?, onError: ErrorHandler?) {
         var request = URLRequest(
