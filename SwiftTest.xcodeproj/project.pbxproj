@@ -20,6 +20,7 @@
 		9F5E3735235F269F005BB422 /* UserFixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E3734235F269F005BB422 /* UserFixture.swift */; };
 		9F5E373A235F2910005BB422 /* UserListViewModelDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5E3739235F2910005BB422 /* UserListViewModelDelegateSpy.swift */; };
 		9F8D1512235DE13600A87218 /* UITableViewCell+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8D1511235DE13600A87218 /* UITableViewCell+Identifier.swift */; };
+		9FBEC167236065170031782E /* EmailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBEC166236065170031782E /* EmailButton.swift */; };
 		9FD5F05D235DB52D00F0DEFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD5F05C235DB52D00F0DEFF /* AppDelegate.swift */; };
 		9FD5F063235DB53000F0DEFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5F062235DB53000F0DEFF /* Assets.xcassets */; };
 		9FD5F066235DB53000F0DEFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FD5F065235DB53000F0DEFF /* Preview Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		9F5E3734235F269F005BB422 /* UserFixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFixture.swift; sourceTree = "<group>"; };
 		9F5E3739235F2910005BB422 /* UserListViewModelDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelDelegateSpy.swift; sourceTree = "<group>"; };
 		9F8D1511235DE13600A87218 /* UITableViewCell+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Identifier.swift"; sourceTree = "<group>"; };
+		9FBEC166236065170031782E /* EmailButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailButton.swift; sourceTree = "<group>"; };
 		9FD5F059235DB52D00F0DEFF /* SwiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FD5F05C235DB52D00F0DEFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FD5F062235DB53000F0DEFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,6 +164,15 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		9FBEC168236068460031782E /* UserInfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				9FD5F094235DB88500F0DEFF /* UserInfoVC.swift */,
+				9FBEC166236065170031782E /* EmailButton.swift */,
+			);
+			path = UserInfoVC;
+			sourceTree = "<group>";
+		};
 		9FD5F050235DB52D00F0DEFF = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +251,7 @@
 			children = (
 				9FD5F08E235DB72100F0DEFF /* Users.storyboard */,
 				9F197AE6235DDA990050FAE8 /* UserListVC */,
-				9FD5F094235DB88500F0DEFF /* UserInfoVC.swift */,
+				9FBEC168236068460031782E /* UserInfoVC */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -418,6 +429,7 @@
 				9F089BD3235FA372009C0DA9 /* AsyncImageDownloader.swift in Sources */,
 				9FD5F05D235DB52D00F0DEFF /* AppDelegate.swift in Sources */,
 				9F5E372B235E2CF4005BB422 /* UserListViewModel.swift in Sources */,
+				9FBEC167236065170031782E /* EmailButton.swift in Sources */,
 				9F197AE4235DDA950050FAE8 /* UserTableViewCell.swift in Sources */,
 				9FD5F0A1235DBFFD00F0DEFF /* UserListResponse.swift in Sources */,
 				9FD5F09F235DBFB300F0DEFF /* User.swift in Sources */,

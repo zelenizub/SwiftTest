@@ -16,7 +16,7 @@ class UserInfoVC: UIViewController {
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
-    @IBOutlet weak var emailTextView: UITextView!
+    @IBOutlet weak var emailButton: EmailButton!
 
     // MARK: - Properties
     private var user: User?
@@ -29,16 +29,10 @@ class UserInfoVC: UIViewController {
     // MARK: - Lifecycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupTextViewAppearance()
         populateWithData()
     }
 
     // MARK: - Utils
-    private func setupTextViewAppearance() {
-        emailTextView.textContainerInset = UIEdgeInsets.zero
-        emailTextView.textContainer.lineFragmentPadding = 0.0
-    }
-
     private func populateWithData() {
         guard let user = user else {
             debugPrint("🔴 Unexpected nil user!")
@@ -48,22 +42,17 @@ class UserInfoVC: UIViewController {
         firstNameLabel.text = user.name.first
         lastNameLabel.text = user.name.last
         ageLabel.text = user.age
-        emailTextView.text = user.email
+        emailButton.email = user.email
     }
 }
 
-// MARK: - UITextViewDelegate
-extension UserInfoVC: UITextViewDelegate {
-    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
-        tryToOpenMailComposer()
-        return false
-    }
-
-    private func tryToOpenMailComposer() {
+// MARK: - EmailButtonDelegate
+extension UserInfoVC: EmailButtonDelegate {
+    func openEmailComposer(with email: String) {
         guard MFMailComposeViewController.canSendMail() else {
             let alert = UIAlertController(title: "Error", message: "Failed to open the email composer", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Retry", style: .default, handler: { _ in
-                self.tryToOpenMailComposer()
+                self.openEmailComposer(with: email)
             }))
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             present(alert, animated: true, completion: nil)
@@ -71,7 +60,7 @@ extension UserInfoVC: UITextViewDelegate {
         }
          let composer = MFMailComposeViewController()
         composer.mailComposeDelegate = self
-        composer.setToRecipients([user?.email].compactMap { $0 })
+        composer.setToRecipients([email])
         present(composer, animated: true, completion: nil)
     }
 }

@@ -53,7 +53,7 @@
             </objects>
             <point key="canvasLocation" x="893" y="138"/>
         </scene>
-        <!--User info-->
+        <!--Delegate-->
         <scene sceneID="XqW-DK-Pyh">
             <objects>
                 <viewController storyboardIdentifier="UserInfoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gxW-FJ-J1e" customClass="UserInfoVC" customModule="SwiftTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -68,7 +68,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qz3-5W-msj">
-                                <rect key="frame" x="10" y="522" width="394" height="128"/>
+                                <rect key="frame" x="10" y="522" width="394" height="112"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="knr-AZ-o5G">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="20.5"/>
@@ -131,10 +131,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NeW-hV-SXC">
-                                        <rect key="frame" x="0.0" y="91.5" width="394" height="36.5"/>
+                                        <rect key="frame" x="0.0" y="91.5" width="394" height="20.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Email:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l7O-7h-DVB">
-                                                <rect key="frame" x="0.0" y="8" width="100" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="aJk-5e-MCF"/>
                                                 </constraints>
@@ -142,17 +142,16 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="user@example.com" translatesAutoresizingMaskIntoConstraints="NO" id="pK3-jp-CRz">
-                                                <rect key="frame" x="110" y="0.0" width="284" height="36.5"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ja5-8A-1Gl" customClass="EmailButton" customModule="SwiftTest" customModuleProvider="target">
+                                                <rect key="frame" x="110" y="0.0" width="284" height="20.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="email"/>
-                                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20.5" id="08w-Zx-Ywv"/>
+                                                </constraints>
                                                 <connections>
-                                                    <outlet property="delegate" destination="gxW-FJ-J1e" id="I7o-Ki-Ltw"/>
+                                                    <outlet property="delegate" destination="gxW-FJ-J1e" id="O6y-Mu-gTe"/>
                                                 </connections>
-                                            </textView>
+                                            </view>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -173,7 +172,7 @@
                     <navigationItem key="navigationItem" title="User info" id="Z0k-qq-l60"/>
                     <connections>
                         <outlet property="ageLabel" destination="QmN-IR-efQ" id="hyt-wB-2jZ"/>
-                        <outlet property="emailTextView" destination="pK3-jp-CRz" id="B1J-zw-3NE"/>
+                        <outlet property="emailButton" destination="ja5-8A-1Gl" id="r8w-cC-lAD"/>
                         <outlet property="firstNameLabel" destination="uDK-Tf-cTX" id="XKA-zj-JED"/>
                         <outlet property="lastNameLabel" destination="Sfg-hk-cZA" id="Sz0-Md-hDm"/>
                         <outlet property="picture" destination="4O4-tQ-9w1" id="chX-vo-PCJ"/>
